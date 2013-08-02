@@ -13,24 +13,19 @@
 //Connecting to the server
 // $conexao = new ConexaoMauser('mysql');
 
-//Defining DBs
-$RPT_UPLOAD = 'REPORTS';
-$REPORTS    = 'REPORTS_PRD';
-$CONSOLE    = 'CONSOLE';
-
-class ConexaoMauser {
+class Conexao {
 
     // Mysql
-    var $MySQL_server         = "intranetbra";
-    var $MySQL_user           = "mysql";
-    var $MySQL_password       = "123456";
-    var $MySQL_database       = "REPORTS_PRD";
+    var $MySQL_server         = "";
+    var $MySQL_user           = "";
+    var $MySQL_password       = "";
+    var $MySQL_database       = "";
     
     // Microsoft SQL Server
-    var $Mssql_server         = "10.72.202.25";
-    var $Mssql_user           = "mssql";
-    var $Mssql_password       = "123456";
-    var $Mssql_database       = "REPORTS_PRD";
+    var $Mssql_server         = "";
+    var $Mssql_user           = "";
+    var $Mssql_password       = "";
+    var $Mssql_database       = "";
     
     // mSQL
     var $mSQL_server          = "";
@@ -84,7 +79,7 @@ class ConexaoMauser {
     // Metodos da classe
     //Metodo Construtor
 
-    function ConexaoMauser($base) {
+    function Conexao($base) {
         $this->conexao($base);
         $this->base = $base;
     }
@@ -683,7 +678,7 @@ class ConexaoMauser {
 
 
         }
-      if($this->base=='mysql'){
+        if($this->base=='mysql'){
     		return mysql_close($this->link);
     	} else if($this->base=='sqlserver'){
     		return mssql_close ($this->link);
