@@ -1,17 +1,17 @@
 <?
 /**
- * MAUSER GROUP BRASIL
+ * Classe de Conexão com Banco de Dados
  *
- * @copyright Mauser Group
- * @license Comercial
+ * @copyright Willian Ribeiro Angelo
+ * @license Open Source
  *
- * @author Equipe TI Mauser Brasil 2013 <it.bra@mausergroup.com>
- * @package Mauser BI 2.0
+ * @author Willian Ribeiro Angelo <agfoccus@gmail.com>
+ * @package Conexao 2.0
  */
 
 
 //Connecting to the server
-// $conexao = new ConexaoMauser('mysql');
+// $conexao = new Conexao('mysql');
 
 class Conexao {
 
